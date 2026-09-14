@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/19566067f7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="image/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>BCA Student</p>
+                <h1>Hi, I'm <span>Ganesh </span><br>Jangale from Ahilyanagar</h1>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------------------about--------------------------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/user.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>I am a passionate BCA student with a strong interest in web development and programming. I enjoy creating innovative solutions and continuously learning new technologies.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML, CSS & JavaScript</span><br>Designing Websites</li>
+                            <li><span>Python</span><br>Programming</li>
+                            <li><span>Java</span><br>Programming</li>
+                            <li><span>SQL</span><br>Database Management</li>
+
+                        </ul>
+                    </div>
+                      <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Fresher</span><br>I'm a fresher actively looking for internships and entry-level roles. If you're hiring or open to a conversation, I'd love to hear from you.</li>
+                           
+                        </ul>
+                    </div>
+                     <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024-27 Present</span><br>Last Year BCA</li>
+                            <li><span>2022-24</span><br>Higher Secondary</li>
+                        </ul>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------------services--------------------------------------- -->
+    
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Designing and developing responsive websites using modern technologies.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Programming</h2>
+                    <p>Creating efficient and scalable software solutions using various programming languages.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Database Management</h2>
+                    <p>Designing and maintaining databases to ensure data integrity and optimal performance.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- --------------------------------portfolio--------------------------------------- --> -->
+    
+    <div id="portfolio">
+        <div class="container">
+             <h1 class="sub-title"></h1>
+
+
+        </div>
+    </div>
+    
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (var i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].classList.remove("active-tab");
+            }
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-link");
+            }
+            document.getElementById(tabname).classList.add("active-tab");
+            event.currentTarget.classList.add("active-link");
+        }
+    </script>
+
+
+
+
+
+
+</body>
+</html>
